@@ -1,0 +1,28 @@
+.tickets {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem;
+    margin: 0;
+
+    & tr {
+        margin: 0;
+    }
+
+    & tr, th {
+        page-break-inside: avoid;
+    }
+}
+.ticket {
+    border: 1px solid black;
+    width: 12rem;
+    font-size: 12px;
+    padding: 0.5rem;
+
+    &>h3 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
