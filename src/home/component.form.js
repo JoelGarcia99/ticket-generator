@@ -26,6 +26,7 @@ export const FormComponent = () => {
         dispatch(defineTicket({
             title: entries.title,
             description: entries.content,
+            showNumbers: entries.checkbox,
             columns: entries.numbercol,
             quantity: entries.number,
             offset: entries.start,

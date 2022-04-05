@@ -39,6 +39,7 @@
 textarea {
     display: block;
     height: 5rem;
+    overflow-y: scroll;
     width: 20rem;
     resize: none;
 }

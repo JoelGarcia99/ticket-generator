@@ -18,20 +18,34 @@ export const TicketsScreen = ()=>{
             {
                 perRow.map((rowID)=>{
                     return (
-                            <tr>
-                                {
-                                    perColumn.map((colID)=>(
-                                        <td
-                                            key={rowID.toString() + colID.toString()}
-                                            className='ticket'
+                        <tr>
+                            {
+                                perColumn.map((colID)=>(
+                                    <td
+                                        key={rowID.toString() + colID.toString()}
+                                        className='ticket'
+                                    >
+                                        <h3
+                                            style={
+                                                !ticket.showNumbers? {
+                                                    display: "flex",
+                                                    flexDirection: "row",
+                                                    justifyContent: "center"
+                                                }:{}
+                                            }
+                                        
                                         >
-                                            <h3><span>{ticket.title}</span><span>#{ticketNumber++}</span></h3>
-                                            <br />
-                                            <ReactMarkdown>{ticket.description}</ReactMarkdown>
-                                        </td>
-                                    ))
-                                }
-                            </tr>
+                                            <span>{ticket.title}</span>
+                                            {ticket.showNumbers && <span>#{ticketNumber++}</span>}
+                                        </h3>
+                                        <br />
+                                        <ReactMarkdown
+                                            className='markdown'
+                                        >{`\n${ticket.description}`.split('\n').join('\n&nbsp;')}</ReactMarkdown>
+                                    </td>
+                                ))
+                            }
+                        </tr>
                     )
                 })
             }
