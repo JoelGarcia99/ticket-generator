@@ -39,7 +39,7 @@ export const FormComponent = () => {
         <div className='ticketform'>
             <form onSubmit={handleSubmit}>
                 <div className='maindiv'>
-                    <label>Title</label>
+                    <label>Título</label>
                     <input 
                         value={entries.title}
                         type="text" 
@@ -51,7 +51,7 @@ export const FormComponent = () => {
                     />
                 </div>
                 <div className='maindiv'>
-                    <label>Content (markdown)</label>
+                    <label>Contenido (Markdown)</label>
                     <textarea 
                         placeholder="Body"
                         id="content"
@@ -61,7 +61,7 @@ export const FormComponent = () => {
                     />
                 </div>
                 <div>
-                    <label>Include numbers&nbsp;</label>
+                    <label>Incluir números&nbsp;</label>
                     <input
                         type="checkbox"
                         name="checkbox"
@@ -77,7 +77,7 @@ export const FormComponent = () => {
                     />
                 </div>
                 <div className='maindiv'>
-                    <label>Start number</label>
+                    <label>Número de inicio</label>
                     <input 
                         type="number"
                         min={1} step={1}
@@ -89,7 +89,7 @@ export const FormComponent = () => {
                     />
                 </div>
                 <div className='maindiv'>
-                    <label>Number of tickets</label>
+                    <label>Número de tickets</label>
                     <input 
                         type="number" 
                         min={1} step={1} 
@@ -101,7 +101,7 @@ export const FormComponent = () => {
                     />
                 </div>
                 <div className='maindiv'>
-                    <label>Tickets per column</label>
+                    <label>Cantidad de tickets por columna</label>
                     <input 
                         type="numbercol" 
                         min={1} step={1} 
@@ -114,7 +114,7 @@ export const FormComponent = () => {
                 </div>
                 <input 
                     type="submit" 
-                    value="Generate" 
+                    value="Generar" 
                 />
             </form>
         </div>
